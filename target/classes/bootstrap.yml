@@ -1,0 +1,26 @@
+spring:
+  # 项目名称，默认情况下Nacos中配置需要和这个保持一致
+  application:
+    name: test
+  cloud:
+    nacos:
+      # 配置
+      config:
+        # 命名空间id(此处不用public,因public初始化的空间, id为空)
+        namespace: dev
+        server-addr: 59.173.237.6:8090
+        username: nacos
+        password: nacos
+        file-extension: yml
+        config-retry-time: 300000
+        shared-configs: application.yml
+
+      # 发布服务时需要加上这个，不然Nacos无法监听到
+      discovery:
+        namespace: dev
+        server-addr: 59.173.237.6:8090
+server:
+  port: 8500
+
+username: 234
+password: 333
