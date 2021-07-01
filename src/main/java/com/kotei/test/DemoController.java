@@ -23,6 +23,7 @@ class DemoController{
 
     @GetMapping("/getValue")
     public String getValue(){
+        System.out.println("你是好的");
         return "[username: " + username + ", password: " + password + "]";
     }
 }
